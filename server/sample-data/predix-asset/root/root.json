@@ -6,7 +6,7 @@
     "parent": "/parent-asset",
     "parentId": "/parent-asset",
     "description": "Parent Asset Description",
-    "uri": "/enterprises/parent-asset",
+    "uri": "/enterprises/parent-asset/parent-asset.json",
     "level": "enterprise",
     "isOpenable": true
   }],

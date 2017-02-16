@@ -45,7 +45,7 @@
           threshold="5">
         </px-simple-line-chart>
         <iron-ajax
-          url="/api/time-series/simple-data/2"
+          url="../../sample-data/time-series/simple-data/simple-data-2.json"
           last-response="{{_simpleDataValuesB}}"
           auto>
         </iron-ajax>
@@ -61,7 +61,7 @@
           legend-labels="[[_simpleDataValuesA.data.labels]]">
         </px-simple-line-chart>
         <iron-ajax
-          url="/api/time-series/simple-data/1"
+          url="../../sample-data/time-series/simple-data/simple-data-1.json"
           last-response="{{_simpleDataValuesA}}"
           auto>
         </iron-ajax>
@@ -77,7 +77,7 @@
           legend-labels="[[_simpleDataValuesC.data.labels]]">
         </px-simple-line-chart>
         <iron-ajax
-          url="/api/time-series/simple-data/3"
+          url="../../sample-data/time-series/simple-data/simple-data-3.json"
           last-response="{{_simpleDataValuesC}}"
           auto>
         </iron-ajax>

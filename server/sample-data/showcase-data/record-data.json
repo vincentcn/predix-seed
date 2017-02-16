@@ -1,0 +1,741 @@
+{
+    "objectName": "Showcase",
+    "object": {
+        "__object": "io_showcase",
+        "io_created_by": {
+            "raw": "764f0869-8b2a-4e43-8f23-88f593863eff",
+            "name": "System Administrator",
+            "deleted": false,
+            "__object": "io_user"
+        },
+        "io_search_filter_language": {
+            "raw": null,
+            "name": null,
+            "deleted": null,
+            "__object": "io_language"
+        },
+        "io_showcase_string": {
+            "raw": "Sample Text"
+        },
+        "io_documentation": {
+            "raw": null
+        },
+        "io_showcase_currency_amount": {
+            "raw": "248 6313ba56-bc48-11e0-beec-001ec950a80f",
+            "value": "248",
+            "symbol": "$",
+            "position": [
+                "5e64c122-e4ec-4913-8606-a8ac4c65f6de=before_amount=Before Amount"
+            ],
+            "precision": "2",
+            "alphabetic_code": "USD"
+        },
+        "io_search_filter_file_object": {
+            "raw": null,
+            "name": null,
+            "deleted": null,
+            "__object": "io_object"
+        },
+        "io_created_on": {
+            "raw": "2012-06-28T12:48:45.996+08:00"
+        },
+        "io_showcase_path": {
+            "raw": null
+        },
+        "io_description": {
+            "raw": [
+                [
+                    "en",
+                    "foo"
+                ]
+            ]
+        },
+        "io_external_id": {
+            "raw": null
+        },
+        "io_updated_by": {
+            "raw": "764f0869-8b2a-4e43-8f23-88f593863eff",
+            "name": "System Administrator",
+            "deleted": false,
+            "__object": "io_user"
+        },
+        "io_showcase_content_web_page": {
+            "raw": null
+        },
+        "io_search_filter_object_and_field": {
+            "raw": null,
+            "name": null,
+            "deleted": null,
+            "__object": null
+        },
+        "io_updated_on": {
+            "raw": "2016-10-27T04:07:32.109+08:00"
+        },
+        "io_showcase_phone_number": {
+            "raw": "+1 (650) 123456"
+        },
+        "io_showcase_string_localized": {
+            "raw": [
+                [
+                    "en",
+                    "Hello!"
+                ],
+                [
+                    "zh",
+                    "你好!"
+                ],
+                [
+                    "de",
+                    "Guten Tag!"
+                ],
+                [
+                    "es",
+                    "Hola!"
+                ],
+                [
+                    "fr",
+                    "Bonjour!"
+                ]
+            ]
+        },
+        "io_showcase_integer": {
+            "raw": "42"
+        },
+        "io_showcase_boolean": {
+            "raw": true
+        },
+        "io_showcase_content_make_field_readonly": {
+            "raw": null
+        },
+        "io_showcase_url": {
+            "raw": "http://servicemax.com"
+        },
+        "io_folder": {
+            "raw": null,
+            "name": null,
+            "deleted": null,
+            "__object": "io_folder"
+        },
+        "io_showcase_quantity": {
+            "raw": "1888 dd574d5a-c7bf-11e0-b724-001ec950a80f",
+            "value": "1888",
+            "symbol": "s",
+            "name": "seconds"
+        },
+        "io_showcase_option_list": {
+            "raw": [
+                "ad9bebb4-271c-4eb4-9706-8e6b91bece5f=option_one=Option 1"
+            ],
+            "uuid": "ad9bebb4-271c-4eb4-9706-8e6b91bece5f",
+            "identifier": "option_one",
+            "name": "Option 1"
+        },
+        "io_search_filter_identifier_field": {
+            "raw": null,
+            "name": null,
+            "deleted": null,
+            "__object": "io_field"
+        },
+        "io_showcase_email_address": {
+            "raw": "test@servicemax.com"
+        },
+        "io_release": {
+            "raw": "a594a8fe-ea82-443f-afe7-dcd42abf6183",
+            "name": "2.0.0",
+            "deleted": false,
+            "__object": "io_release"
+        },
+        "io_showcase_address": {
+            "raw": [
+                "3875 Hopyard Rd #300, Pleasanton, California 94588, United States",
+                "3875",
+                "3875 Hopyard Rd #300",
+                "Pleasanton",
+                "California",
+                "94588",
+                "United States",
+                "37.6840625",
+                "-121.90269590000003",
+                "US"
+            ]
+        },
+        "io_supported_languages": {
+            "raw": null,
+            "uuid": null,
+            "identifier": null,
+            "name": null
+        },
+        "io_showcase_date": {
+            "raw": "2012-12-11"
+        },
+        "io_showcase_document": {
+            "raw": null,
+            "name": null,
+            "deleted": null,
+            "__object": "io_document"
+        },
+        "io_showcase_dynamic_relationship": {
+            "raw": [
+                "764f0869-8b2a-4e43-8f23-88f593863eff",
+                "8b283436-18f9-3cb7-a1f8-2d330fe154cf"
+            ],
+            "name": "System Administrator",
+            "deleted": false,
+            "__object": "io_user"
+        },
+        "io_showcase_unique_identifier": {
+            "raw": "41f19ff6-2738-4000-8bfd-a18950caa1d1"
+        },
+        "io_short_description": {
+            "raw": null
+        },
+        "io_showcase_text": {
+            "raw": "Sample Text"
+        },
+        "io_name": {
+            "raw": "UI Unit Test Sample Record"
+        },
+        "io_showcase_password": {
+            "raw": "********************"
+        },
+        "io_custodian": {
+            "raw": "c9d336e0-824c-4be1-9bf2-feff5261b69e",
+            "name": "ServiceMax",
+            "deleted": false,
+            "__object": "io_custodian"
+        },
+        "io_owner": {
+            "raw": "bbbf0872-b9dc-11e0-adfd-00ff8314382b",
+            "name": "Ludwig Xu",
+            "deleted": false,
+            "__object": "io_user"
+        },
+        "io_deleted": {
+            "raw": false
+        },
+        "io_showcase_relationship": {
+            "raw": "92e0b868-7228-410a-a98a-0b356d1028de",
+            "name": "How to implement auto-complete search filters to restrict matches in relationship fields?",
+            "deleted": false,
+            "__object": "io_how_to_topic"
+        },
+        "io_showcase_number": {
+            "raw": "3.1426"
+        },
+        "io_showcase_allowed_units": {
+            "raw": null,
+            "name": null,
+            "deleted": null,
+            "__object": null
+        },
+        "io_showcase_multiselect_option_list": {
+            "raw": [
+                "68e86df4-2c07-48dd-992f-a2e6b9d5c2a8=option_two=Option 2",
+                "277f6bae-da5f-4bd9-abfd-cc27577ff90d=option_three=Option 3"
+            ],
+            "uuid": "68e86df4-2c07-48dd-992f-a2e6b9d5c2a8",
+            "identifier": "option_two",
+            "name": "Option 2"
+        },
+        "io_showcase_identifier": {
+            "raw": "unique_identifier"
+        },
+        "io_showcase_recurrence": {
+            "raw": null
+        },
+        "io_path": {
+            "raw": null
+        },
+        "io_status": {
+            "raw": [
+                "b2585a3b-e3d2-4cd2-a132-eb6aa04e4572",
+                "8d55d83e-195e-4aad-ae34-b4c05ad3fe1a",
+                "6bbeb7a0-4848-4b45-a592-00b52a67b7f1",
+                "c29175ad-65a4-4f1b-9f44-c8b4cf14df81"
+            ],
+            "name": "Canceled"
+        },
+        "io_showcase_timestamp": {
+            "raw": "2012-12-11T10:04:00.000+08:00"
+        },
+        "io_tags": {
+            "raw": null
+        },
+        "io_showcase_rollup": {
+            "raw": "368"
+        },
+        "io_overrides": {
+            "raw": null
+        },
+        "io_platform_changes_permitted": {
+            "raw": null,
+            "uuid": null,
+            "identifier": null,
+            "name": null
+        },
+        "io_showcase_time": {
+            "raw": "16:27:00.000"
+        },
+        "io_application": {
+            "raw": null,
+            "name": null,
+            "deleted": null,
+            "__object": "io_application"
+        },
+        "io_showcase_hashed_password": {
+            "raw": [
+                "********************"
+            ]
+        },
+        "io_notes": {
+            "raw": null
+        },
+        "io_showcase_file": {
+            "raw": "unsupported"
+        },
+        "io_showcase_content_attachments": {
+            "raw": null
+        },
+        "io_search_filter_password_field": {
+            "raw": null,
+            "name": null,
+            "deleted": null,
+            "__object": "io_field"
+        },
+        "io_active": {
+            "raw": true
+        },
+        "io_showcase_text_localized": {
+            "raw": [
+                [
+                    "en",
+                    "Hello World!"
+                ],
+                [
+                    "zh",
+                    "世界您好！"
+                ],
+                [
+                    "de",
+                    "Hallo Welt!"
+                ],
+                [
+                    "es",
+                    "Hola mundo!"
+                ],
+                [
+                    "fr",
+                    "Bonjour tout le monde!"
+                ]
+            ]
+        },
+        "io_package": {
+            "raw": "e69104be-fd5f-4dc7-9155-cd8472a93fb3",
+            "name": null,
+            "deleted": null,
+            "__object": "io_package"
+        },
+        "io_showcase_file_quantity": {
+            "raw": null,
+            "value": null,
+            "symbol": null,
+            "name": null
+        },
+        "io_showcase_status": {
+            "raw": null
+        },
+        "io_showcase_image": {
+            "raw": "b43d607f-6e1c-4098-abb1-475030a3488a",
+            "name": "2015-SMX-logo.png",
+            "deleted": false,
+            "__object": "io_document"
+        },
+        "io_showcase_rollup_type": {
+            "raw": null,
+            "uuid": null,
+            "identifier": null,
+            "name": null
+        },
+        "io_showcase_percent": {
+            "raw": "0.9999"
+        },
+        "io_private": {
+            "raw": false
+        },
+        "io_showcase_code": {
+            "raw": [
+                "ruby",
+                "puts 'Hello World'"
+            ]
+        },
+        "io_showcase_interval": {
+            "raw": "P1Y2M3DT4H5M6S"
+        },
+        "io_release_status": {
+            "raw": [
+                "a3b8456c-2250-4b1b-9e7b-ef7449265e61=released=Released"
+            ],
+            "uuid": "a3b8456c-2250-4b1b-9e7b-ef7449265e61",
+            "identifier": "released",
+            "name": "Released"
+        },
+        "io_search_filter_object_document": {
+            "raw": null,
+            "name": null,
+            "deleted": null,
+            "__object": "io_document"
+        },
+        "io_search_filter_object_field": {
+            "raw": null,
+            "name": null,
+            "deleted": null,
+            "__object": "io_field"
+        },
+        "io_uuid": {
+            "raw": "41f19ff6-2738-4000-8bfd-a18950caa1d1"
+        },
+        "io_showcase_content_run_report": {
+            "raw": null
+        }
+    },
+    "overwrite_data": {
+        "io_status": {
+            "raw": "{\"current_status\":\"Canceled\",\"deleted\":true}"
+        },
+        "io_showcase_image": {
+            "updated_on": "1442271977805"
+        }
+    },
+    "options": {
+        "relations_changed": true,
+        "isSystemObject": false,
+        "isSeedObject": false,
+        "fieldOptions": {
+            "io_showcase_phone_number": {
+                "placeholder": "+1 (925) 965-7859"
+            },
+            "io_search_filter_file_object": {
+                "placeholder": "[Select Target Record]"
+            },
+            "io_owner": {
+                "required": true,
+                "do_not_clone": true,
+                "placeholder": "[Select Target Record]"
+            },
+            "io_showcase_document": {
+                "placeholder": null
+            },
+            "io_private": {
+                "required": true,
+                "placeholder": null
+            },
+            "io_platform_changes_permitted": {
+                "do_not_clone": true,
+                "placeholder": "[Select Option]"
+            },
+            "io_showcase_password": {
+                "placeholder": "********"
+            },
+            "io_showcase_content_attachments": {
+                "placeholder": null
+            },
+            "io_showcase_string_localized": {
+                "placeholder": null
+            },
+            "io_showcase_address": {
+                "placeholder": "[Enter Address]"
+            },
+            "io_search_filter_password_field": {
+                "placeholder": "[Select Target Record]"
+            },
+            "io_showcase_email_address": {
+                "placeholder": "johnny@servicemax.com"
+            },
+            "io_search_filter_object_field": {
+                "placeholder": "[Select Target Record]"
+            },
+            "io_created_on": {
+                "editable": false,
+                "do_not_clone": true,
+                "placeholder": "[Set by System]"
+            },
+            "io_showcase_status": {
+                "placeholder": "Lorem ipsum dolor"
+            },
+            "io_showcase_file": {
+                "placeholder": ""
+            },
+            "io_showcase_relationship": {
+                "placeholder": "[Select Target Record]"
+            },
+            "io_description": {
+                "placeholder": null,
+                "textareaRows": "15"
+            },
+            "io_updated_by": {
+                "editable": false,
+                "do_not_clone": true,
+                "placeholder": "[Set by System]"
+            },
+            "io_showcase_multiselect_option_list": {
+                "multiple": true,
+                "placeholder": "[Select Option]"
+            },
+            "io_showcase_url": {
+                "placeholder": "http://www.servicemax.com"
+            },
+            "io_showcase_quantity": {
+                "placeholder": "3.14"
+            },
+            "io_showcase_file_quantity": {
+                "placeholder": "3.14"
+            },
+            "io_short_description": {
+                "placeholder": "Lorem ipsum dolor"
+            },
+            "io_showcase_dynamic_relationship": {
+                "placeholder": "[Select Target Record]"
+            },
+            "io_search_filter_object_and_field": {
+                "placeholder": "Used by Showcase"
+            },
+            "io_search_filter_identifier_field": {
+                "placeholder": "[Select Target Record]"
+            },
+            "io_active": {
+                "placeholder": null
+            },
+            "io_showcase_text_localized": {
+                "placeholder": null
+            },
+            "io_release_status": {
+                "placeholder": "[Select Option]"
+            },
+            "io_documentation": {
+                "placeholder": null,
+                "textareaRows": "20"
+            },
+            "io_overrides": {
+                "placeholder": "[Select Field]"
+            },
+            "io_application": {
+                "placeholder": "[Select Target Record]"
+            },
+            "io_showcase_code": {
+                "placeholder": null,
+                "supportedLanguage": {
+                    "css": "CSS",
+                    "groovy": "Groovy",
+                    "html": "HTML",
+                    "java": "Java",
+                    "javascript": "JavaScript",
+                    "json": "JSON",
+                    "latex": "LaTeX",
+                    "ruby": "Ruby",
+                    "svg": "SVG",
+                    "sql": "SQL",
+                    "xml": "XML",
+                    "text": "Text"
+                }
+            },
+            "io_showcase_integer": {
+                "placeholder": "42",
+                "localized": "false"
+            },
+            "io_deleted": {
+                "required": true,
+                "editable": false,
+                "placeholder": null
+            },
+            "io_showcase_time": {
+                "placeholder": "08:30:00"
+            },
+            "io_showcase_path": {
+                "placeholder": "[No Hierarchy]"
+            },
+            "io_showcase_rollup": {
+                "editable": false,
+                "placeholder": "[Set by System]"
+            },
+            "io_showcase_unique_identifier": {
+                "placeholder": "00000000-0000-0000-0000-000000000000"
+            },
+            "io_status": {
+                "show_status_name": true,
+                "placeholder": "[Select Status]"
+            },
+            "io_path": {
+                "editable": false,
+                "placeholder": null
+            },
+            "io_search_filter_object_document": {
+                "placeholder": "[Select Target Record]"
+            },
+            "io_showcase_rollup_type": {
+                "placeholder": "[Select Option]"
+            },
+            "io_showcase_hashed_password": {
+                "placeholder": "********"
+            },
+            "io_showcase_timestamp": {
+                "placeholder": "02/12/2017 20:57:48"
+            },
+            "io_showcase_text": {
+                "placeholder": null
+            },
+            "io_showcase_percent": {
+                "placeholder": "80%"
+            },
+            "io_folder": {
+                "placeholder": "[Select Target Record]"
+            },
+            "io_uuid": {
+                "editable": false,
+                "do_not_clone": true,
+                "placeholder": "[Set by System]"
+            },
+            "io_showcase_date": {
+                "placeholder": "02/12/2017"
+            },
+            "io_showcase_currency_amount": {
+                "placeholder": "1234567"
+            },
+            "io_external_id": {
+                "placeholder": "Lorem ipsum dolor"
+            },
+            "io_created_by": {
+                "editable": false,
+                "do_not_clone": true,
+                "placeholder": "[Set by System]"
+            },
+            "io_release": {
+                "placeholder": "[Select Target Record]"
+            },
+            "io_showcase_interval": {
+                "placeholder": "1 hour",
+                "max": "",
+                "min": ""
+            },
+            "io_showcase_boolean": {
+                "placeholder": null
+            },
+            "io_showcase_number": {
+                "placeholder": "3.14"
+            },
+            "io_showcase_allowed_units": {
+                "placeholder": "[Select Target Record]"
+            },
+            "io_search_filter_language": {
+                "placeholder": "[Select Target Record]"
+            },
+            "io_showcase_image": {
+                "placeholder": null
+            },
+            "io_package": {
+                "placeholder": "[Select Target Record]"
+            },
+            "io_custodian": {
+                "do_not_clone": true,
+                "placeholder": "[Select Target Record]"
+            },
+            "io_showcase_identifier": {
+                "placeholder": "unique"
+            },
+            "io_showcase_content_run_report": {
+                "placeholder": null
+            },
+            "io_showcase_option_list": {
+                "placeholder": "[Select Option]"
+            },
+            "io_tags": {
+                "placeholder": "Lorem ipsum dolor"
+            },
+            "io_showcase_recurrence": {
+                "do_not_clone": true,
+                "placeholder": null
+            },
+            "io_showcase_content_web_page": {
+                "placeholder": null
+            },
+            "io_notes": {
+                "placeholder": null
+            },
+            "io_showcase_string": {
+                "placeholder": "Lorem ipsum dolor"
+            },
+            "io_updated_on": {
+                "editable": false,
+                "do_not_clone": true,
+                "placeholder": "[Set by System]"
+            },
+            "io_showcase_content_make_field_readonly": {
+                "placeholder": null
+            },
+            "io_supported_languages": {
+                "placeholder": "[Select Option]"
+            },
+            "io_name": {
+                "required": true,
+                "placeholder": "Lorem ipsum dolor"
+            }
+        },
+        "trackHistory": true,
+        "interFieldDependencies": "{ \"placeholder\": null }",
+        "canCreate": true,
+        "primaryNameField": "io_name",
+        "iconUrl": "/document/ea01056c-ed9f-4717-8939-e03f172233aa/latest?1482127293743",
+        "hasChangeLogs": true,
+        "hasAttachments": true,
+        "hasComments": true,
+        "originalobjectName": "Showcase",
+        "objectName": "Showcase",
+        "objectUUID": "294ae5eb-952b-467e-a2fc-d27751221d2a",
+        "objectFullIdentifier": "io_showcase",
+        "recordUUID": "41f19ff6-2738-4000-8bfd-a18950caa1d1",
+        "diagramUUID": null,
+        "recordName": "UI Unit Test Sample Record",
+        "operation": {
+            "change_logs": true,
+            "documentation": false,
+            "execution_logs": false,
+            "form_designer": true,
+            "object_designer": true,
+            "application_designer": false,
+            "dashboard_designer": false,
+            "permissions": false,
+            "start_quick_tour": false,
+            "initiate": false,
+            "run_business_rule": false,
+            "run_activity_report": false,
+            "follow": true,
+            "add_followers": true,
+            "unfollow": false,
+            "run_record_report": true,
+            "copy": true,
+            "clone": true,
+            "merge": false,
+            "share": true,
+            "convert": false,
+            "delete_permanently": false,
+            "delete": true
+        },
+        "deleted": false,
+        "isExist": true,
+        "parentRecord": null,
+        "canRead": true,
+        "canDelete": true,
+        "canUpdate": true,
+        "isCustodian": true,
+        "startTime": "",
+        "nowMonth": "",
+        "nowMonthE": "",
+        "nowDay": "",
+        "attachments_count": "4",
+        "comments_count": "0",
+        "tasks_count": "0",
+        "volatile": true,
+        "isLocked": false,
+        "canSave": true,
+        "recordview_cache": true
+    }
+}

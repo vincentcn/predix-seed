@@ -1,0 +1,32 @@
+{
+    "outline": [
+        {
+            "fieldId": "io_name",
+            "dataType": "String",
+            "options": {
+                "label": "Name"
+            }
+        },
+        {
+            "fieldId": "io_showcase_string",
+            "dataType": "String",
+            "options": {
+                "label": "Showcase String"
+            }
+        }
+    ],
+    "groups": [
+        {
+            "name": "Overview",
+            "fields": [
+                {
+                    "fieldId": "io_name",
+                    "dataType": "String",
+                    "options": {
+                        "label": "Name"
+                    }
+                }
+            ]
+        }
+    ]
+}

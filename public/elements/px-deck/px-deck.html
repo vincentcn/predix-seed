@@ -14,9 +14,6 @@
     </template>
   </template>
 
-  <!-- include lodash utility library -->
-  <script src="../../bower_components/lodash/dist/lodash.min.js"></script>
-
   <script>
     Polymer({
 
@@ -40,8 +37,8 @@
       },
 
       _cardIsVisible: function(card) {
-        var includes = _.includes(this._cards, card);
-        return includes;
+        // var includes = _.includes(this._cards, card);
+        return true;
       },
 
       _filterCards: function(card) {

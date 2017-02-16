@@ -1,0 +1,145 @@
+<dom-module id="list-view">
+  <template>
+    <px-view-header use-deck-selector="true">
+      <px-deck-selector decks='[{"id":"1","name":"Default View","url":"/defaulte/view"}, {"id":"2","name":"My View","url":"/defaulte/view"}, {"id":"3","name":"Custom View","url":"/defaulte/view"}]'
+        config-options='{"edit":true,"actionType":"Add View","eventType":"addView"}'>
+      </px-deck-selector>
+      <px-dropdown class='right actionable' display-value="Actions">
+        <px-dropdown-content extend-dropdown='true' extend-dropdown-by='25' max-cont-character-width='10'
+          items='[{"key":"1","val":"Mass update"},{"key":"2","val":"Inline edit"},{"key":"3","val":"Delete"}]'>
+        </px-dropdown-content>
+      </px-dropdown>
+    </px-view-header>
+    <div style="background: white;">
+      <template is="dom-if" if="{{currentViewA}}">
+        <px-data-table selectable="{{listSelectable}}" striped="true" table-data="{{data}}" filterable="true" enable-column-reorder="true" enable-column-resize="true" table-rows="true" hide-pagination-control="true">
+          <template is="dom-repeat" items="{{fieldsA}}">
+            <px-data-table-column
+              name="{{item.name}}"
+              sortable="true"
+              filterable="true"
+              editable="{{item.editable}}">
+            </px-data-table-column>
+          </template>
+        </px-data-table>
+      </template>
+      <template is="dom-if" if="{{currentViewB}}">
+        <px-data-table selectable="{{listSelectable}}" striped="true" table-data="{{data}}" filterable="true" enable-column-reorder="true" enable-column-resize="true" table-rows="true" hide-pagination-control="true">
+          <template is="dom-repeat" items="{{fieldsB}}">
+            <px-data-table-column
+              name="{{item.name}}"
+              sortable="true"
+              filterable="true"
+              editable="{{item.editable}}">
+            </px-data-table-column>
+          </template>
+        </px-data-table>
+      </template>
+      <template is="dom-if" if="{{currentViewC}}">
+        <px-data-table selectable="{{listSelectable}}" striped="true" table-data="{{data}}" filterable="true" enable-column-reorder="true" enable-column-resize="true" table-rows="true" hide-pagination-control="true">
+          <template is="dom-repeat" items="{{fieldsC}}">
+            <px-data-table-column
+              name="{{item.name}}"
+              sortable="true"
+              filterable="true"
+              editable="{{item.editable}}">
+            </px-data-table-column>
+          </template>
+        </px-data-table>
+      </template>
+
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is: 'list-view',
+      properties: {
+        data: {
+          type: Array,
+          value: [],
+          notify: true,
+          reflectToAttribute: true
+        },
+        fieldsA: {
+          type: Array,
+          value: [{name: 'first', editable: 'true'}, {name: 'last', editable: 'true'}, {name: 'email', editable: 'false'}]
+        },
+        fieldsB: {
+          type: Array,
+          value: [{name: 'first', editable: 'true'}, {name: 'last', editable: 'true'}, {name: 'email', editable: 'false'}, {name: 'phone', editable: 'false'}]
+        },
+        fieldsC: {
+          type: Array,
+          value: [{name: 'email', editable: 'false'}, {name: 'first', editable: 'true'}, {name: 'last', editable: 'true'}]
+        },
+        listSelectable: {
+          type: Boolean,
+          value: false
+        },
+        currentViewA: {
+          type: Boolean,
+          value: true
+        },
+        currentViewB: {
+          type: Boolean,
+          value: false
+        },
+        currentViewC: {
+          type: Boolean,
+          value: false
+        }
+      },
+      ready: function() {
+        console.log('blankpage-view ready()')
+        this.data = [{"first":"Valentine","last":"Meyer","email":"valentinemeyer@scentric.com"},{"first":"Silva","last":"Alexander","email":"silvaalexander@gmail.com"},{"first":"Hopkins","last":"Wong","email":"hopkinswong@hotmail.com"}];
+      },
+      listeners: {
+        'selected-deck-changed': 'viewChanged',
+        'deckEvent': 'addView',
+        'px-dropdown-value-changed': 'listAction'
+      },
+      listAction: function(e) {
+        switch(e.detail.val) {
+          case 'Mass update':
+            this.listSelectable = true;
+            break;
+          case 'Inline edit':
+            this.listSelectable = false;
+            break;
+          case 'Delete':
+            this.listSelectable = false;
+            break;
+          default:
+            alert('Failed');
+        }
+      },
+      addView: function(e) {
+        alert('Add View');
+      },
+      viewChanged: function(e) {
+        switch(e.detail.value.id) {
+          case '1':
+            this.currentViewA = true;
+            this.currentViewB = false;
+            this.currentViewC = false;
+            this.data = [{"first":"Valentine","last":"Meyer","email":"valentinemeyer@scentric.com"},{"first":"Silva","last":"Alexander","email":"silvaalexander@gmail.com"},{"first":"Hopkins","last":"Wong","email":"hopkinswong@hotmail.com"}];
+            break;
+          case '2':
+            this.currentViewA = false;
+            this.currentViewB = true;
+            this.currentViewC = false;
+            this.data = [{"first":"Valentine","last":"Meyer","email":"valentinemeyer@scentric.com","phone":"14518339899"},{"first":"Hopkins","last":"Wong","email":"hopkinswong@hotmail.com","phone":"14518339899"}];
+            break;
+          case '3':
+            this.currentViewA = false;
+            this.currentViewB = false;
+            this.currentViewC = true;
+            this.data = [{"email":"valentinemeyer@scentric.com","first":"Valentine","last":"Meyer"},{"email":"hopkinswong@hotmail.com","first":"Hopkins","last":"Wong"}];
+            break;
+          default:
+            alert('failed');
+        }
+      }
+    });
+  </script>
+</dom-module>

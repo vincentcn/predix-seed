@@ -76,11 +76,13 @@ SET UP MOCK API ROUTES
 var viewServiceRoutes = require('./view-service-routes.js')();
 var assetRoutes = require('./predix-asset-routes.js')();
 var timeSeriesRoutes = require('./time-series-routes.js')();
+var showcaseRoutes = require('./showcase-data-routes.js')();
 
 // add mock API routes.  (Remove these before deploying to production.)
 app.use('/api/view-service', jsonServer.router(viewServiceRoutes));
 app.use('/api/predix-asset', jsonServer.router(assetRoutes));
 app.use('/api/time-series', jsonServer.router(timeSeriesRoutes));
+app.use('/api/showcase-data', jsonServer.router(showcaseRoutes));
 
 /****************************************************************************
 	SET UP EXPRESS ROUTES

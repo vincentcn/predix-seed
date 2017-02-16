@@ -19,9 +19,6 @@
 
   </template>
 
-  <!-- include lodash utility library -->
-  <script src="../../bower_components/lodash/dist/lodash.min.js"></script>
-
   <script>
     Polymer({
 
@@ -39,7 +36,7 @@
         },
         viewServiceBaseUrl: {
           type: String,
-          value: '/api/view-service/' // default
+          value: '../../sample-data/view-service' // default
         },
         // updated when deckId is changed
         _deckUrl: {
@@ -57,7 +54,7 @@
       ],
 
       _computeDeckUrl: function() {
-        return this.viewServiceBaseUrl + 'decks/' + this.deckId;
+        return this.viewServiceBaseUrl  + this.deckId + ".json";
       },
 
       _deckIsVisible: function(deckId) {
@@ -79,9 +76,14 @@
         }
         // find existing deck
         var that = this;
-        var index = _.findIndex(this._decks, function(o) {
-          return o.id === that.deckId
-        });
+        var index = -1;
+        for (var i = 0; i < that._decks.length; i++) {
+          if (that._decks[i] == that.deckId) {
+            index = i;
+            break;
+          }
+        }
+
         if(index === -1 && this.deckId) {
           // deck is new
           this.push('_decks', {

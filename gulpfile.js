@@ -36,6 +36,11 @@ gulp.task('watch:public', getTask('watch.public'));
 // -----------------------------------------------------------------------------
 gulp.task('dist', ['dist:copy'], getTask('compile.vulcanize'));
 
+
+// gulp.task('max.copy', getTask('copy.max'));
+// gulp.task('max.index', ['compile:index'], getTask('index.vulcanize'));
+
+
 // -----------------------------------------------------------------------------
 // Task: Dist : Copy source files for deploy to dist/
 // -----------------------------------------------------------------------------
@@ -45,6 +50,19 @@ gulp.task('dist:copy', ['dist:clean', 'compile:index'], getTask('dist.copy'));
 // Task: Dist : Clean 'dist/'' folder
 // -----------------------------------------------------------------------------
 gulp.task('dist:clean', getTask('dist.clean'));
+
+
+
+//  Max tasks
+gulp.task('max.common', getTask('max.common'));
+// gulp.task('max.elements', getTask('compile.vulcanize'));
+gulp.task('max.copy', ['compile:index'], getTask('max.copy'));
+gulp.task('max.vulcanize', getTask('max.vulcanize'));
+gulp.task('max.dist', ['dist:clean', 'max.copy', 'max.common'], getTask('max.vulcanize'));
+gulp.task('max', ['max.dist'], getTask('serve.dist.start'));
+
+
+
 
 // -----------------------------------------------------------------------------
 //  Task: Default (compile source, start server, watch for changes)

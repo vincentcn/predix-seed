@@ -1,8 +1,3 @@
-<link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/px-card/px-card.html">
-<link rel="import" href="../../bower_components/px-vis-timeseries/px-vis-timeseries.html">
-<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
-
 <dom-module id="winddata-view">
   <template>
 
@@ -27,7 +22,7 @@
       </px-vis-timeseries>
       <!-- Choose one of these iron-ajax elements to load data from the source of your choice.
         First option loads sample data from a json file in the server/sample-data directory. -->
-      <iron-ajax url="/api/time-series/delta-egt/1" id="tsQueryElement" last-response="{{rawTsData}}" auto></iron-ajax>
+      <iron-ajax url="../../sample-data/time-series/delta-egt/delta-egt-cruise.json" id="tsQueryElement" last-response="{{rawTsData}}" auto></iron-ajax>
 
       <!-- Second option loads data from a custom wind data microservice.  -->
       <!-- <iron-ajax url="/windy/services/windservices/yearly_data/sensor_id/Compressor-2015:CompressionRatio?order=asc&starttime=1y-ago" id="tsQueryElement" last-response="{{rawTsData}}" auto></iron-ajax> -->

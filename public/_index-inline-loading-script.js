@@ -2,20 +2,34 @@
 // The script async & lazy-loads webcomponents-lite polyfill
 // then checks for Polymer element
 // then removes #splash div to reveal application UI in #app
-(function() {
+(function () {
 
   // Wait for async loading of elements.html bundle
-  var onWebComponentsLoaded = function() {
-    var mainElementLink = document.querySelector('#main-element-import');
+  var onWebComponentsLoaded = function () {
+    var commonElement = document.querySelector('#common-elements');
+    if (commonElement.import && commonElement.import.readyState === 'complete') {
+      onCommonLoaded();
+    } else {
+      commonElement.addEventListener('load', onCommonLoaded);
+    }
+  };
+
+  var onCommonLoaded = function () {
+    var mainElementLink = document.createElement('link');
+    mainElementLink.async = true;
+    mainElementLink.rel = "import";
+    mainElementLink.href = './elements/seed-app/seed-app.html';
+    document.head.appendChild(mainElementLink);
+
     if (mainElementLink.import && mainElementLink.import.readyState === 'complete') {
       onMainElementLoaded();
     } else {
       mainElementLink.addEventListener('load', onMainElementLoaded);
     }
-  };
+  }
 
   // Remove #splash div and 'loading' class from body
-  var onMainElementLoaded = function() {
+  var onMainElementLoaded = function () {
     // Fade splash screen, then remove
     var splashEl = document.getElementById('splash');
     splashEl.parentNode.removeChild(splashEl);

@@ -1,7 +1,3 @@
-<link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/px-card/px-card.html">
-<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
-<link rel="import" href="../../bower_components/px-data-table/px-data-table.html" />
 
 <dom-module id="simple-asset-view">
   <template>
@@ -14,7 +10,7 @@
 
       <!-- First option loads sample data from a json file in the server/sample-data directory. -->
       <!-- mock-asset-service -->
-      <iron-ajax url="/api/predix-asset/compressor-2017" id="assetQueryElement" last-response="{{rawAssetData}}" auto></iron-ajax>
+      <iron-ajax url="../../sample-data/predix-asset/compressor-2017.json" id="assetQueryElement" last-response="{{rawAssetData}}" auto></iron-ajax>
       <!-- end mock-asset-service -->
 
       <!-- Second option loads data from Predix Time Series directly. -->

@@ -28,7 +28,8 @@ module.exports = function (gulp) {
           'public/bower_components/iron-ajax/iron-ajax.html',
           'public/bower_components/iron-ajax/iron-request.html',
           'public/bower_components/px-card/px-card-header.html',
-          'public/bower_components/px-card/px-card.html'
+          'public/bower_components/px-card/px-card.html',
+          'public/elements/common/common.html'
         ],
         stripExcludes: [
           'public/bower_components/polymer/polymer.html',
@@ -47,6 +48,6 @@ module.exports = function (gulp) {
         inlineCss: true,
         inlineScripts: true
       }))
-      .pipe(gulp.dest('dist/public/elements/'));
+      .pipe(gulp.dest('dist/public/max/elements/'));
   };
 };

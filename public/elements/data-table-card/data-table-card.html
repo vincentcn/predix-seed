@@ -58,7 +58,7 @@
 
     _computeAjaxURL: function() {
       if (this._dataValueExists(this.elementData, 'dataUrl')){
-        return this.elementData.attributes.dataUrl;
+        return this.resolveUrl(this.elementData.attributes.dataUrl);
       }
     },
 

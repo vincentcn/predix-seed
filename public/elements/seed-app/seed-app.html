@@ -1,20 +1,9 @@
 <!-- import polymer -->
-<link rel="import" href="../../bower_components/polymer/polymer.html">
 
 <!-- import page level css -->
 <link rel="import" href="seed-app-styles.html">
 
-<!-- app route -->
-<link rel="import" href="../../bower_components/app-route/app-location.html">
-<link rel="import" href="../../bower_components/app-route/app-route.html">
-
-<!-- px components -->
-<link rel="import" href="../../bower_components/px-app-nav/px-app-nav.html">
-<link rel="import" href="../../bower_components/px-view/px-view.html">
-
-<link rel="import" href="../ge-svg-logo/ge-svg-logo.html">
-<link rel="import" href="../predix-logo/predix-logo.html">
-<link rel="import" href="../seed-footer/seed-footer.html">
+<link rel="import" href="../common/common.html">
 
 <dom-module id="seed-app">
   <template>
@@ -24,10 +13,13 @@
 
     <header role="banner" class="flex flex--middle">
       <div class="viewport flex">
-        <h3 class="flex__item app-title"><ge-svg-logo class="u-mr--"></ge-svg-logo> Seed Application</h3>
+        <h3 class="flex__item app-title">
+          <ge-svg-logo class="u-mr--"></ge-svg-logo> Seed Application</h3>
         <div class="flex__item">
           <div class="flex" style="text-align:right;">
-            <h3 class="flex__item weight--normal logo">Powered by <predix-logo style="display:inline-block; width: 82px;" class="flex__item"></predix-logo></h3>
+            <h3 class="flex__item weight--normal logo">Powered by
+              <predix-logo style="display:inline-block; width: 82px;" class="flex__item"></predix-logo>
+            </h3>
           </div>
         </div>
       </div>
@@ -36,64 +28,44 @@
     <div class="viewport">
 
       <div class="content-wrapper">
-        <px-app-nav
-          class="navbar"
-          nav-items="[[navItems]]"
-          path-prefix="[[pathPrefix]]">
+        <px-app-nav class="navbar" nav-items="[[navItems]]" path-prefix="[[pathPrefix]]">
         </px-app-nav>
 
         <main class="u-pt-- u-pr-- u-pl--" role="main">
 
           <!-- app-location captures url and assigns _route value -->
-          <app-location
-            id="carbonLocation"
-            route="{{_route}}"
-            use-hash-as-path>
+          <app-location id="carbonLocation" route="{{_route}}" use-hash-as-path>
           </app-location>
 
           <!-- /dashboards route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/dashboards"
-            active="{{_dashboardsActive}}">
+          <app-route route="[[_route]]" pattern="/dashboards" active="{{_dashboardsActive}}">
           </app-route>
 
-          <px-view
-            active="[[_dashboardsActive]]"
-            element-href="/elements/views/dashboards-view.html">
+          <px-view active="[[_dashboardsActive]]" element-href="elements/views/dashboards-view.html">
           </px-view>
 
           <!-- /blankpage route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/blankpage"
-            active="{{_blankpageActive}}">
+          <app-route route="[[_route]]" pattern="/listview" active="{{_blankpageActive}}">
           </app-route>
-          <px-view
-            active="[[_blankpageActive]]"
-            element-href="/elements/views/blankpage-view.html">
+          <px-view active="[[_blankpageActive]]" element-href="elements/views/list-view.html">
           </px-view>
 
           <!-- /winddata route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/winddata"
-            active="{{_winddataActive}}">
+          <app-route route="[[_route]]" pattern="/winddata" active="{{_winddataActive}}">
           </app-route>
-          <px-view
-            active="[[_winddataActive]]"
-            element-href="/elements/views/winddata-view.html">
+          <px-view active="[[_winddataActive]]" element-href="elements/views/winddata-view.html">
           </px-view>
 
           <!-- /simple-asset route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/simple-asset"
-            active="{{_simple-assetActive}}">
+          <app-route route="[[_route]]" pattern="/simple-asset" active="{{_simple-assetActive}}">
           </app-route>
-          <px-view
-            active="[[_simple-assetActive]]"
-            element-href="/elements/views/simple-asset-view.html">
+          <px-view active="[[_simple-assetActive]]" element-href="elements/views/simple-asset-view.html">
+          </px-view>
+
+          <!-- /showcase form view route and view -->
+          <app-route route="[[_route]]" pattern="/showcase-form" active="{{_showcaseFormActive}}">
+          </app-route>
+          <px-view active="[[_showcaseFormActive]]" element-href="elements/views/showcase-form-view.html">
           </px-view>
 
         </main>
@@ -118,7 +90,7 @@
         //Global application object
         global: {
           type: Object,
-          value: function() {
+          value: function () {
             return {
               version: '1.0',
               name: 'Predix UI Seed',
@@ -129,39 +101,43 @@
 
         navItems: {
           type: Array,
-          value: function() {
+          value: function () {
             return [{
               "label": "Dashboards",
               "path": "/dashboards",
               "icon": "fa-tachometer"
-            }, {
-              "label": "Blank Page",
-              "path": "/blankpage",
-              "icon": "fa-file"
-            }
+            },
             //Uncomment this block to show the Simple Asset navigation item on the menu.
-            /* // asset-nav-item
-            ,{
+            // asset-nav-item
+            {
               "label": "Simple Asset",
               "path": "/simple-asset",
               "icon": "fa-sitemap"
-            }
+            },
             // end asset-nav-item */
             //Uncomment this block to show the Wind Data navigation item on the menu.
-            /*
-            ,{
+            {
               "label": "Wind Data",
               "path": "/winddata",
               "icon": "fa-line-chart"
+            },
+            {
+              "label": "Showcase Form View",
+              "path": "/showcase-form",
+              "icon": "fa:fa-briefcase"
+            },
+            {
+              "label": "List View",
+              "path": "/listview",
+              "icon": "fa-file"
             }
-            */
             ]
           }
         },
 
         footerLinks: {
           type: Array,
-          value: function() {
+          value: function () {
             return [{
               "label": "Privacy",
               "href": "#/dashboards",
@@ -183,7 +159,7 @@
               "href": "#/dashboards",
               "target": "_blank"
             }
-          ]
+            ]
           }
         },
 
@@ -194,14 +170,16 @@
         }
       },
 
-      ready: function(){
+      ready: function () {
         this._checkForDefaultRoute();
       },
 
-      _checkForDefaultRoute: function() {
+      _checkForDefaultRoute: function () {
         // set default route to /dashboards
         var l = window.location;
-        if((l.hash === "#/" || l.hash === "") && l.pathname === "/") {
+        console.log("what is current hash ", l.hash);
+        console.log("what is current hash type", typeof(l.hash));
+        if ((l.hash === "#/" || l.hash === "")) {
           l.hash = "/dashboards";
         }
       }

@@ -1,0 +1,427 @@
+<!-- import page level css -->
+<link rel="import" href="showcase-form-view-styles.html">
+
+<dom-module id="showcase-form-view">
+
+  <!-- apply imported showcase form view style module -->
+  <style include="showcase-form-view-styles"></style>
+
+  <template>
+    <px-view-header title="[[recordData.objectName]]: [[recordData.object.io_name.raw]]" style="display: block; margin-bottom: 6px;"></px-view-header>
+    <px-card>
+      <br />
+      <form>
+        <figure class="flag flag--responsive">
+          <div class="flag__img">
+            <img src="/document/ea01056c-ed9f-4717-8939-e03f172233aa/latest" style="width: 75px; height: 75px;">
+          </div>
+          <figcaption class="flag__body">
+            <span>[[recordData.objectName]]</span>
+            <h1 style="margin-top: 0px;margin-bottom: 0px;border-top-width: 0px;border-bottom-width: 0px;">[[recordData.object.io_name.raw]]
+              <h1>
+          </figcaption>
+        </figure>
+        <div id="io-outline-fileds" class="style-scope showcase-form-view">
+          <fieldset class="form-field">
+            <ol class="list-bare">
+              <li class="form-field">
+                <label for="io-basic-form-field-io_name">Name</label>
+                <input class="text-input input--large" id="io-basic-form-field-io_name" type="text" value="{{recordData.object.io_name.raw::input}}">
+              </li>
+              <li class="form-field">
+                <label for="io-basic-form-field-io_showcase_string">Showcase String</label>
+                <input class="text-input input--large" id="io-basic-form-field-io_showcase_string" type="text" value="{{recordData.object.io_showcase_string.raw::input}}">
+              </li>
+            </ol>
+          </fieldset>
+        </div>
+        <px-tab-set id="io-tab-set" selected="{{selectedTab}}">
+          <px-tab id="overview">Basic Input DataType</px-tab>
+          <px-tab id="details">Extended Datatype</px-tab>
+          <px-tab id="chart-demo">Charts DataType</px-tab>
+          <px-tab id="systemInfo">System Info</px-tab>
+        </px-tab-set>
+        <px-tab-pages id="io-tab-pages" selected="{{selectedTab}}">
+          <div id="io-group-overview">
+            <br />
+
+            <fieldset class="form-field">
+              <ol class="list-bare">
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_showcase_string">Showcase Email Address</label>
+                  <input class="text-input input--large" id="io-basic-form-field-io_showcase_string" type="text" value="test@servicemax.com">
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_showcase_string">Showcase Identifier</label>
+                  <input class="text-input input--large" id="io-basic-form-field-io_showcase_string" type="text" value="unique_identifier">
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_showcase_string">Showcase Phone Number</label>
+                  <input class="text-input input--large" id="io-basic-form-field-io_showcase_string" type="text" value="+1 (650) 123456">
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_showcase_string">Showcase URL</label>
+                  <input class="text-input input--large" id="io-basic-form-field-io_showcase_string" type="text" value="http://servicemax.com">
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_showcase_string">Showcase Unique Identifier</label>
+                  <input class="text-input input--large" id="io-basic-form-field-io_showcase_string" type="text" value="41f19ff6-2738-4000-8bfd-a18950caa1d1">
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_showcase_string">Showcase Options</label>
+                  <select class="text-input input--large">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                      <option>Option 4</option>
+                  </select>
+                </li>
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_showcase_string">Showcase Multiselect Option List</label>
+                  <select class="text-input input--large" multiple="">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                      <option>Option 4</option>
+                  </select>
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_showcase_string">Showcase Text</label>
+                  <textarea class="text-input input--large" placeholder="Type something...">Sample Text</textarea>
+                </li>
+              </ol>
+            </fieldset>
+          </div>
+          <div id="io-group-details">
+            <br />
+
+            <fieldset class="form-field">
+              <ol class="list-bare">
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_showcase_string">Showcase Language</label>
+                  <div style="width:425px">
+                    <px-typeahead max-suggestions="10" placeholder="Please type in your language:" local-candidates='["Chinese","English"]'></px-typeahead>
+                  </div>
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_showcase_string">Showcase Country</label>
+                  <div style="width:425px">
+                    <px-typeahead max-suggestions="5" placeholder="Please type in your country." prefetch-url="https://www.predix-ui.com/px-typeahead/px-typeahead/countries.json"></px-typeahead>
+                  </div>
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_showcase_string">Showcase Datetime</label>
+                  <!--<div style="width:425px">-->
+                  <px-datetime-picker date-format="YYYY/MM/DD" time-format="HH:mm:ss" time-zone="UTC" show-time-zone="abbreviatedText" date-time="2016-02-05T05:30:00.000Z"></px-datetime-picker>
+                  <!--</div>-->
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_showcase_string">Showcase Datetime Range</label>
+                  <!--<div style="width:425px">-->
+                  <px-rangepicker show-buttons="true" date-format="YYYY/MM/DD" time-format="HH:mm:ss" time-zone="UTC" show-time-zone="abbreviatedText"
+                    range='{"from":"2015-07-01T01:00:00.000Z","to":"2016-07-08T14:00:00.000Z"}'></px-rangepicker>
+                    <!--</div>-->
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_showcase_string">Showcase Calendar Day</label>
+                  <div style="width:425px">
+                    <px-calendar-picker block-past-dates="true" display-mode="day"></px-calendar-picker>
+                  </div>
+                </li>
+
+              </ol>
+            </fieldset>
+          </div>
+          <div id="io-group-charts">
+            <br />
+            <fieldset class="form-field">
+              <ol class="list-bare">
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_name">Showcase Percent Circle</label>
+                  <div style="width:325px; height: 325px;">
+                    <px-percent-circle val="33" max="100" thickness="30"></px-percent-circle>
+                  </div>
+                </li>
+                <li class="form-field">
+                  <br />
+                  <br />
+                  <label for="io-basic-form-field-io_name">Showcase Bar Chart</label>
+                  <div>
+                    <px-simple-bar-chart width="425" height="300" chart-data='[[102,80,63,127,102,77,57,71,106,78,129],[103,55,54,103,89,56,74,52,67,110,93],[128,119,71,74,98,87,114,67,67,62,104],[92,64,88,121,61,55,115,110,78,129,119],[102,83,106,58,102,62,58,67,75,113,120],[68,129,94,58,53,117,96,87,97,70,108],[109,109,104,104,121,86,97,51,73,100,74],[112,57,53,122,128,120,56,94,72,110,102]]'
+                      legend-labels='["A","B","C","D","E","F","G","H","I","J","K","L"]' colors='["#5da5da","#faa43a","#60bd68","#f17cb0","#b2912f","#b276b2","#decf3f","#f15854","#4d4d4d"]'
+                      legend-order="reverse"></px-simple-bar-chart>
+                  </div>
+                </li>
+                <li class="form-field">
+                  <br />
+                  <br />
+                  <label for="io-basic-form-field-io_name">Showcase vis timeseries</label>
+                  <div>
+                    <px-vis-timeseries include-all-series="true" enable-tooltip="true" prevent-resize="true" width="425" height="200" selection-type="xy"
+                      register-location="top" chart-data='[{"x":1397177400000,"y0":0,"y1":2},{"x":1397228040000,"y0":0.897,"y1":2.5},{"x":1397248260000,"y0":1,"y1":3.5},{"x":1397291280000,"y0":2,"y1":1.5},{"x":1397318100000,"y0":1.5,"y1":0.5},{"x":1397342100000,"y0":3,"y1":2},{"x":1397390820000,"y0":0.897,"y1":1.5}]'></px-vis-timeseries>
+                  </div>
+                </li>
+              </ol>
+            </fieldset>
+          </div>
+          <div id="io-group-systemInfo">
+            <br />
+
+            <fieldset class="form-field">
+              <ol class="list-bare">
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_name">Owner</label>
+                  <input class="text-input input--large" id="io-basic-form-field-io_name" type="text" value="Ludwig Xu">
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_name">Created By</label>
+                  <input class="text-input input--large" id="io-basic-form-field-io_name" type="text" value="System Administrator">
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_name">Updated By</label>
+                  <input class="text-input input--large" id="io-basic-form-field-io_name" type="text" value="System Administrator">
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_name">Created On</label>
+                  <px-datetime-picker date-format="YYYY/MM/DD" time-format="HH:mm:ss" time-zone="UTC" show-time-zone="abbreviatedText" date-time="2012-06-28T12:48:00.000Z"></px-datetime-picker>
+                </li>
+                <li class="form-field">
+                  <label for="io-basic-form-field-io_name">Updated On</label>
+                  <px-datetime-picker date-format="YYYY/MM/DD" time-format="HH:mm:ss" time-zone="UTC" show-time-zone="abbreviatedText" date-time="2016-10-27T05:30:00.000Z"></px-datetime-picker>
+                </li>
+
+              </ol>
+            </fieldset>
+          </div>
+        </px-tab-pages>
+      </form>
+    </px-card>
+
+  </template>
+  <script>
+    Polymer({
+      is: 'showcase-form-view',
+      properties: {
+        selectedTab: {
+          type: Number,
+          value: 0
+        },
+        recordData: {
+          type: Object,
+          value: {
+            "objectName": "Showcase",
+            "object": {
+              "io_showcase_string": {
+                "raw": "Sample Text"
+              },
+              "io_name": {
+                "raw": "UI Unit Test Sample Record"
+              }
+            }
+          },
+          observer: "recordDataChanged"
+        },
+        InitRecordData: {
+          type: Object,
+          value: null,
+          observer: "requestDataIsReady"
+        },
+        recordLayout: {
+          type: Object,
+          value: null,
+          observer: "requestDataIsReady"
+        }
+      },
+
+      // observers: [
+      //   'nameChanged(recordData.name)'
+      // ],
+      // nameChanged: function (nameVal) {
+      //   console.log("newName is ", nameVal);
+      //   // this.set("recordData.name", nameVal);
+      // },
+
+      recordDataChanged: function (raw) {
+        console.log("Updated record is ", raw);
+      },
+
+      ready: function () {
+        console.log('empty form-view ready()');
+      },
+
+      requestDataIsReady: function (raw) {
+        if (this.InitRecordData && this.recordLayout) {
+          this.set("recordData", this.InitRecordData);
+          console.log("rendering record form...");
+          // this.renderRecordForm();
+          // this.logoutRenderedDOM();
+        } else {
+          console.log("The init data is NOT ready yet...");
+        }
+      },
+
+      logoutRenderedDOM: function () {
+        var outlineSection = this.$$("#io-outline-fileds"),
+          pxTabSection = this.$$("#io-tab-set"),
+          pxPageSection = this.$$("#io-tab-pages");
+
+        console.log("io-outline-fileds div is: \n", outlineSection);
+        console.log("io-tab-set div is: \n", pxTabSection);
+        console.log("io-tab-pages div is: \n", pxPageSection);
+      },
+
+      renderRecordForm: function () {
+        this.renderFormOutline();
+        this.renderFormGroups();
+        Polymer.dom.flush()
+      },
+
+      renderFormOutline: function () {
+        var outlineSection = this.$$("#io-outline-fileds"),
+          fieldSetEle = this.createFieldSet(this.recordLayout.outline);
+
+        outlineSection.appendChild(fieldSetEle);
+      },
+
+      renderFormGroups: function () {
+        var tabSection = this.$$("#io-tab-set"),
+          tabPageSection = this.$$("#io-tab-pages");
+
+        if (Array.isArray(this.recordLayout.groups)) {
+          for (var i = 0; i < this.recordLayout.groups.length; i++) {
+            var groupLayoutData = this.recordLayout.groups[i],
+              groupName = groupLayoutData.name;
+
+            // tab Name, <px-tab id="io-tab-oberview">Overview</px-tab>
+            var tabEle = document.createElement("px-tab");
+            tabEle.setAttribute("id", "io-tab-" + groupName.toLowerCase());
+            tabEle.textContent = groupName;
+            tabSection.appendChild(tabEle);
+
+            // tab content. <div id="io-tab-content-oberview"><br />...</div>
+            var tabContent = document.createElement("div"),
+              breakLineEle = document.createElement("br"),
+              fieldSetEle = this.createFieldSet(groupLayoutData.fields);
+            tabContent.setAttribute("id", "io-tab-content-" + groupName.toLowerCase());
+            tabContent.appendChild(breakLineEle);
+            tabContent.appendChild(fieldSetEle);
+
+            tabPageSection.appendChild(tabContent);
+          }
+
+        } else {
+          console.warn("There is no valid layout grups sections.");
+        }
+      },
+
+      createFieldSet: function (fieldSetlayout) {
+        var fieldSetEle = this.createFieldSetStructure(),
+          elementsList = this.createfieldList(fieldSetlayout),
+          elementsRoot = fieldSetEle.firstChild;
+
+
+        for (var i = 0; i < elementsList.length; i++) {
+          elementsRoot.appendChild(elementsList[i]);
+        }
+
+        return fieldSetEle;
+      },
+
+
+      // <fieldset class="form-field">
+      //   <ol class="list-bare">
+      //   </ol>
+      // </fieldset>
+      createFieldSetStructure: function () {
+        var fieldSetEle = document.createElement("fieldset");
+        fieldSetEle.setAttribute("class", "form-field");
+
+        var olEle = document.createElement("ol");
+        olEle.setAttribute("class", "list-bare");
+
+        fieldSetEle.appendChild(olEle);
+        return fieldSetEle;
+      },
+
+      createfieldList: function (fieldListlayout) {
+        var elementsList = [];
+        if (Array.isArray(fieldListlayout)) {
+          for (var i = 0; i < fieldListlayout.length; i++) {
+            var fieldElement = this.createField(fieldListlayout[i]);
+            if (fieldElement) {
+              elementsList.push(fieldElement);
+            }
+          }
+        } else {
+          console.warn("Empty filed list...");
+        }
+
+        return elementsList;
+      },
+
+      // element layout:
+      // <li class="form-field">
+      //   ......
+      // </li>
+      // 
+      // element data:
+      // {
+      //     "fieldId": "io_name",
+      //     "dataType": "String",
+      //     "options": {
+      //         "label": "Name"
+      //     }
+      // }
+      createField: function (fieldLayout) {
+        var fieldElement,
+          fullElement;
+
+        if (fieldLayout) {
+          switch (fieldLayout.dataType) {
+            case "String":
+              fieldElement = this.createStringField(fieldLayout);
+              break;
+            default:
+              console.log("Unknown datatype: ", fieldLayout.dataType);
+          }
+        } else {
+          console.log("Null or empty field layout define.");
+        }
+
+        if (fieldElement) {
+          fullElement = document.createElement("li");
+          fullElement.setAttribute("class", "form-field");
+          fullElement.appendChild(fieldElement);
+        }
+
+        return fullElement;
+      },
+
+      // <label for="basic-form-name-outline">Name</label>
+      // <input class="text-input input--large" id="basic-form-name-outline" type="text" value="{{recordData.name::input}}">
+      createStringField: function (fieldLayout) {
+        if (!fieldLayout) {
+          return null;
+        }
+
+        var rootDom = document.createElement("div"),
+          mainEleId = "io-basic-form-field-" + fieldLayout.fieldId,
+          labelEle = document.createElement("label"),
+          inputEle = document.createElement("input");
+
+        labelEle.setAttribute("for", mainEleId);
+        labelEle.textContent = fieldLayout.options.label;
+        inputEle.setAttribute("class", "text-input input--large");
+        inputEle.setAttribute("id", mainEleId);
+        inputEle.setAttribute("type", "text");
+        inputEle.setAttribute("value", "{{recordData.object." + fieldLayout.fieldId + ".raw::input}}");
+
+        rootDom.appendChild(labelEle);
+        rootDom.appendChild(inputEle);
+
+        return rootDom;
+      }
+    });
+  </script>
+</dom-module>
