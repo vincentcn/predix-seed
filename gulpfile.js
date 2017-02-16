@@ -54,11 +54,9 @@ gulp.task('dist:clean', getTask('dist.clean'));
 
 
 //  Max tasks
-gulp.task('max.common', getTask('max.common'));
-// gulp.task('max.elements', getTask('compile.vulcanize'));
-gulp.task('max.copy', ['compile:index'], getTask('max.copy'));
-gulp.task('max.vulcanize', getTask('max.vulcanize'));
-gulp.task('max.dist', ['dist:clean', 'max.copy', 'max.common'], getTask('max.vulcanize'));
+gulp.task('max.copy', ['dist:clean','compile:index'], getTask('max.copy'));
+gulp.task('max.common',['max.copy'], getTask('max.common'));
+gulp.task('max.dist', ['max.common'], getTask('max.vulcanize'));
 gulp.task('max', ['max.dist'], getTask('serve.dist.start'));
 
 
