@@ -8,6 +8,7 @@ const merge = require('merge-stream');
 module.exports = function(gulp) {
   return function() {
     var index = gulp.src(['public/index.html']).pipe(gulp.dest('./dist/public/max'));
+    var favicon = gulp.src(['public/favicon.png']).pipe(gulp.dest('./dist/public/max'));
     var index_styles = gulp.src(['public/index-inline-styles.html']).pipe(gulp.dest('./dist/public/max'));
     var px_theme_styles = gulp.src(['public/bower_components/px-theme/px-theme-styles.html']).pipe(gulp.dest('./dist/public/max/common'));
     var polymer = gulp.src(['public/bower_components/polymer/polymer.html']).pipe(gulp.dest('./dist/public/max'));
@@ -20,6 +21,6 @@ module.exports = function(gulp) {
     var server = gulp.src(['server/**/*.*']).pipe(gulp.dest('./dist/server'))
     var packageFile = gulp.src(['package.json']).pipe(gulp.dest('dist'));
 
-    return merge(index, index_styles, px_theme_styles, polymer,demo_data, sample_data, fonts1,fonts2, server, packageFile);
+    return merge(index, favicon, index_styles, px_theme_styles, polymer,demo_data, sample_data, fonts1,fonts2, server, packageFile);
   };
 };

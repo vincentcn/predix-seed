@@ -68,6 +68,12 @@
           <px-view active="[[_showcaseFormActive]]" element-href="elements/views/showcase-form-view.html">
           </px-view>
 
+          <!-- /Max winddata route and view -->
+          <app-route route="[[_route]]" pattern="/max-winddata" active="{{_maxWinddataActive}}">
+          </app-route>
+          <px-view active="[[_maxWinddataActive]]" element-href="elements/views/max-winddata-view.html">
+          </px-view>
+
         </main>
 
       </div>
@@ -130,6 +136,11 @@
               "label": "List View",
               "path": "/listview",
               "icon": "fa-file"
+            },
+            {
+              "label": "Max Wind Data",
+              "path": "/max-winddata",
+              "icon": "fa-line-chart"
             }
             ]
           }
@@ -178,7 +189,7 @@
         // set default route to /dashboards
         var l = window.location;
         console.log("what is current hash ", l.hash);
-        console.log("what is current hash type", typeof(l.hash));
+        console.log("what is current hash type", typeof (l.hash));
         if ((l.hash === "#/" || l.hash === "")) {
           l.hash = "/dashboards";
         }
