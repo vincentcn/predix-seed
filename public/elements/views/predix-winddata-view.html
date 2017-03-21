@@ -1,7 +1,7 @@
-<dom-module id="max-winddata-view">
+<dom-module id="predix-winddata-view">
   <template>
 
-    <px-card header-text="Wind Data From Max">
+    <px-card header-text="Wind Data From Predix Asset">
 
       <px-vis-timeseries
         width="800"
@@ -22,7 +22,7 @@
       </px-vis-timeseries>
       <!-- Choose one of these iron-ajax elements to load data from the source of your choice.
         First option loads sample data from a json file in the server/sample-data directory. -->
-      <iron-ajax url="/api/rest/v1/io_winddata?fields=io_timestamp,io_value" id="tsQueryElement" last-response="{{rawTsData}}" auto></iron-ajax>
+      <iron-ajax url="/api/rest/v1/io_predix_winddata?fields=io_timestamp,io_value" id="tsQueryElement" last-response="{{rawTsData}}" auto></iron-ajax>
 
       <!-- Second option loads data from a custom wind data microservice.  -->
       <!-- <iron-ajax url="/windy/services/windservices/yearly_data/sensor_id/Compressor-2015:CompressionRatio?order=asc&starttime=1y-ago" id="tsQueryElement" last-response="{{rawTsData}}" auto></iron-ajax> -->
@@ -34,7 +34,7 @@
   </template>
   <script>
     Polymer({
-      is: 'max-winddata-view',
+      is: 'predix-winddata-view',
       properties: {
         tsChartData: {
           type: Array

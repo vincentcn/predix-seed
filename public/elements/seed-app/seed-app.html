@@ -74,6 +74,12 @@
           <px-view active="[[_maxWinddataActive]]" element-href="elements/views/max-winddata-view.html">
           </px-view>
 
+          <!-- /Predix winddata route and view -->
+          <app-route route="[[_route]]" pattern="/predix-winddata" active="{{_predixWinddataActive}}">
+          </app-route>
+          <px-view active="[[_predixWinddataActive]]" element-href="elements/views/predix-winddata-view.html">
+          </px-view>
+
         </main>
 
       </div>
@@ -108,41 +114,46 @@
         navItems: {
           type: Array,
           value: function () {
-            return [{
-              "label": "Dashboards",
-              "path": "/dashboards",
-              "icon": "fa-tachometer"
-            },
-            //Uncomment this block to show the Simple Asset navigation item on the menu.
-            // asset-nav-item
-            {
-              "label": "Simple Asset",
-              "path": "/simple-asset",
-              "icon": "fa-sitemap"
-            },
-            // end asset-nav-item */
-            //Uncomment this block to show the Wind Data navigation item on the menu.
-            {
-              "label": "Wind Data",
-              "path": "/winddata",
-              "icon": "fa-line-chart"
-            },
-            {
-              "label": "Showcase Form View",
-              "path": "/showcase-form",
-              "icon": "fa:fa-briefcase"
-            },
-            {
-              "label": "List View",
-              "path": "/listview",
-              "icon": "fa-file"
-            },
-            {
-              "label": "Max Wind Data",
-              "path": "/max-winddata",
-              "icon": "fa-line-chart"
-            }
-            ]
+            return [
+              {
+                "label": "Dashboards",
+                "path": "/dashboards",
+                "icon": "fa-tachometer"
+              },
+              //Uncomment this block to show the Simple Asset navigation item on the menu.
+              // asset-nav-item
+              {
+                "label": "Simple Asset",
+                "path": "/simple-asset",
+                "icon": "fa-sitemap"
+              },
+              // end asset-nav-item */
+              //Uncomment this block to show the Wind Data navigation item on the menu.
+              {
+                "label": "Wind Data",
+                "path": "/winddata",
+                "icon": "fa-line-chart"
+              },
+              {
+                "label": "Max Wind Data",
+                "path": "/max-winddata",
+                "icon": "fa-line-chart"
+              },
+              {
+                "label": "Predix Wind Data",
+                "path": "/predix-winddata",
+                "icon": "fa-line-chart"
+              },
+              {
+                "label": "Showcase Form View",
+                "path": "/showcase-form",
+                "icon": "fa:fa-briefcase"
+              },
+              {
+                "label": "List View",
+                "path": "/listview",
+                "icon": "fa-file"
+              }];
           }
         },
 
@@ -188,8 +199,6 @@
       _checkForDefaultRoute: function () {
         // set default route to /dashboards
         var l = window.location;
-        console.log("what is current hash ", l.hash);
-        console.log("what is current hash type", typeof (l.hash));
         if ((l.hash === "#/" || l.hash === "")) {
           l.hash = "/dashboards";
         }

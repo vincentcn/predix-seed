@@ -14,6 +14,7 @@ module.exports = function (gulp) {
       'public/elements/views/simple-asset-view.html',
       'public/elements/views/winddata-view.html',
       'public/elements/views/max-winddata-view.html',
+      'public/elements/views/predix-winddata-view.html',
       'public/elements/views/showcase-form-view.html',
       'public/elements/views/list-view.html'
           ], { base: 'public/elements/' })
